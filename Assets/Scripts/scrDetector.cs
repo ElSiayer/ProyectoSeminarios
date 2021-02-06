@@ -74,9 +74,9 @@ public class scrDetector : MonoBehaviour
     {
         WWWForm form = new WWWForm();
 
-        using (UnityWebRequest www = UnityWebRequest.Post("https://eastus.api.cognitive.microsoft.com/customvision/v3.0/Prediction/2d82b525-f3ec-44ad-af43-a24f5bfde0a4/classify/iterations/Iteration2/image", form)) // URL aqui
+        using (UnityWebRequest www = UnityWebRequest.Post("", form)) // URL aqui
         {
-            www.SetRequestHeader("Prediction-Key", "4c9624c20d4a4a4d8b58e48e3fa7a8d8"); //KEY aqui
+            www.SetRequestHeader("Prediction-Key", ""); //KEY aqui
             www.SetRequestHeader("Content-Type", "application/octet-stream");
             www.uploadHandler = new UploadHandlerRaw(data);
             www.uploadHandler.contentType = "application/octet-stream";
